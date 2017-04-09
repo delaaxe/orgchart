@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Organization Chart Web Components</title>
+
+    <link rel="icon" type="image/x-icon" href="app/img/logo.jpg">
+    <link rel="stylesheet" href="app/css/vendor/font-awesome.min.css">
+    <link rel="stylesheet" href="app/css/vendor/orgchart-webcomponents.css">
+    <link rel="stylesheet" href="app/css/style.css">
+
+</head>
+<body>
+    <div>
+        <form id="search">
+            <input type="text" id="search-text" title="" placeholder="Jean Dupont, Martin Durand"/>
+            <input type="submit"/>
+        </form>
+    </div>
+    <div id="chart-container"></div>
+    <script src="app/js/vendor/webcomponents.min.js"></script>
+    <script src="https://rawgit.com/webcomponents/custom-elements/master/src/native-shim.js"></script>
+
+    <script src="app/bundle.js"></script>
+</body>
+</html>
