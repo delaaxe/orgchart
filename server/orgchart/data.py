@@ -1,3 +1,4 @@
+import itertools
 from collections import OrderedDict
 
 import attr
@@ -92,6 +93,11 @@ class Tree:
                 Node(child.value) for child in node.parent.children
             ])
         return []
+
+    def search(self, query):
+        for name in self.items.keys():
+            if query.lower() in name.lower():
+                yield name
 
 
 def load_mock_tree():

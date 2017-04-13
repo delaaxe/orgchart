@@ -1,4 +1,5 @@
 import json
+import itertools
 
 from flask import Flask, request
 from flask_cors import CORS
@@ -51,3 +52,10 @@ class OrgChartFamily(Resource):
     def get(self, id):
         family = tree.get_family(id)
         return json.dumps(tree.to_orgchart_dict(family))
+
+
+@ns.route('/search/<string:query>')
+class OrgChartFamily(Resource):
+    def get(self, query):
+        results = tree.search(query)
+        return json.dumps(itertools.islice(5))

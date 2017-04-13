@@ -42,7 +42,6 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(node.value, 'Jennifer')
         self.assertEqual(max_depth(node), 1)
 
-
     def test_entourage_distance_2(self):
         node = tree.get_entourage('Lao Lao', 2)
         self.assertEqual(node.value, 'Lao Lao')
@@ -59,6 +58,10 @@ class MyTestCase(unittest.TestCase):
         node = tree.get_entourage('Jacko', 2)
         self.assertEqual(node.value, 'Bo Miao')
         self.assertEqual(max_depth(node), 3)
+
+    def test_search(self):
+        results = list(tree.search('mia'))
+        self.assertEqual(4, len(results))
 
 if __name__ == '__main__':
     unittest.main()
